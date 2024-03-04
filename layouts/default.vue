@@ -1,4 +1,3 @@
-<!-- Deprecated -->
 <template>
   <v-card border="false">
     <v-layout>
@@ -7,8 +6,12 @@
         style="height: 300px; width: 100%"
         cover
       ></v-img>
-      <v-navigation-drawer location="right" permanent class="bg-brown-darken-1">
-        <v-list density="compact" nav>
+      <v-navigation-drawer
+        location="right"
+        class="bg-brown-darken-1"
+        style="height: 300px; position: sticky; top: 0"
+      >
+        <v-list density="compact" nav style="width: 300px">
           <NuxtLink
             to="/"
             class="text-decoration-none text-grey-lighten-5 text-h5"
@@ -69,6 +72,10 @@
       <v-main style="height: 300px"></v-main>
     </v-layout>
   </v-card>
+
+  <div>
+    <slot />
+  </div>
 </template>
 
 <script setup></script>
