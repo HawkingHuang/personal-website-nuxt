@@ -2,30 +2,52 @@
   <v-card>
     <v-layout>
       <v-navigation-drawer location="right" permanent>
-        <template v-slot:prepend>
-          <v-list-item
-            lines="two"
-            prepend-avatar="https://randomuser.me/api/portraits/women/81.jpg"
-            title="Hawking Huang"
-          ></v-list-item>
-        </template>
-
-        <v-divider></v-divider>
-
         <v-list density="compact" nav>
-          <v-list-item
-            prepend-icon="mdi-home-city"
-            title="Home"
-            value="home"
-          ></v-list-item>
-          <v-list-item
-            prepend-icon="mdi-account"
-            title="My Account"
-            value="account"
-          ></v-list-item>
+          <NuxtLink to="/"
+            ><v-list-item
+              prepend-icon="mdi-home-circle"
+              title="Home"
+              value="home"
+            ></v-list-item
+          ></NuxtLink>
+          <NuxtLink to="/about"
+            ><v-list-item
+              prepend-icon="mdi-human-greeting"
+              title="About"
+              value="about"
+            ></v-list-item
+          ></NuxtLink>
+          <NuxtLink to="/skills"
+            ><v-list-item
+              prepend-icon="mdi-tools"
+              title="Skills"
+              value="skills"
+            ></v-list-item
+          ></NuxtLink>
+          <NuxtLink to="/portfolio"
+            ><v-list-item
+              prepend-icon="mdi-file-search-outline"
+              title="Portfolio"
+              value="portfolio"
+            ></v-list-item
+          ></NuxtLink>
+          <NuxtLink to="/notes"
+            ><v-list-item
+              prepend-icon="mdi-note-multiple-outline"
+              title="Notes"
+              value="notes"
+            ></v-list-item
+          ></NuxtLink>
+          <NuxtLink to="/youtube">
+            <v-list-item
+              prepend-icon="mdi-youtube"
+              title="YouTube"
+              value="youtube"
+            ></v-list-item
+          ></NuxtLink>
         </v-list>
       </v-navigation-drawer>
-      <v-main style="height: 250px"></v-main>
+      <v-main style="height: 300px"></v-main>
     </v-layout>
   </v-card>
 </template>

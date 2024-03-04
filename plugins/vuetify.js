@@ -1,14 +1,14 @@
-// plugins/vuetify.js
+//   nuxtApp.vueApp.use(vuetify);
+// });
+// import this after install `@mdi/font` package
+import "@mdi/font/css/materialdesignicons.css";
+
+import "vuetify/styles";
 import { createVuetify } from "vuetify";
-import * as components from "vuetify/components";
-import * as directives from "vuetify/directives";
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
-    ssr: true,
-    components,
-    directives,
+    // ... your configuration
   });
-
-  nuxtApp.vueApp.use(vuetify);
+  app.vueApp.use(vuetify);
 });
